@@ -3,23 +3,39 @@
 </script>
 
 <main>
-	<h1>Hello {name}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
+	<div class="one">Div 1</div>
+	<div class="two">Div 2</div>
+	<div class="three">Div 3</div>
+	<div class="four">Div 4</div>
 </main>
 
 <style>
 	main {
-		text-align: center;
-		padding: 1em;
-		max-width: 240px;
-		margin: 0 auto;
+		display: grid;
+		width: 100vw;
+		height: 100vh;
+		grid-template-columns: repeat(2, 50vmax);
+		grid-template-rows: repeat(2, 50vmin);
 	}
 
-	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
+	div {
+		color: white;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.one {
+		background-color: darkblue;
+	}
+	.two {
+		background-color: blue;
+	}
+	.three {
+		background-color: cornflowerblue;
+	}
+	.four {
+		background-color: lightblue;
 	}
 
 	@media (min-width: 640px) {
