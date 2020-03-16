@@ -1,5 +1,6 @@
 <script>
 	import Cell from './Cell.svelte';
+	import Graph from './Graph.svelte';
 	const colours = ['darkblue', 'blue', 'cornflowerblue', 'lightblue'];
 	let numCols = 5;
 	let numRows = 5;
@@ -22,8 +23,13 @@
 		grid
 	</div>
 	<div class="gridContainer" style="{gridInstructions}">
-		{#each cells as cell}
-			<Cell {cell} />
+		{#each cells as cell, i}
+			{#if i > 0 && i % 7 === 0}
+				<Graph />
+			{:else}
+				<Cell {cell} />
+			{/if}
+
 		{/each}
 	</div>
 </main>
