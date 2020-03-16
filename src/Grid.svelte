@@ -1,4 +1,5 @@
 <script>
+	import Cell from './Cell.svelte';
 	const colours = ['darkblue', 'blue', 'cornflowerblue', 'lightblue'];
 	let numCols = 5;
 	let numRows = 5;
@@ -22,7 +23,7 @@
 	</div>
 	<div class="gridContainer" style="{gridInstructions}">
 		{#each cells as cell}
-			<div class="gridCell" style="background-color: {cell.colour}">{cell.text}</div>
+			<Cell {cell} />
 		{/each}
 	</div>
 </main>

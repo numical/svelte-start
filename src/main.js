@@ -1,7 +1,7 @@
-import App from './App.svelte';
+import Grid from './Grid.svelte';
 
-const app = new App({
+const grid = new Grid({
 	target: document.body
 });
 
-export default app;
+export default grid;
