@@ -24,7 +24,7 @@
 	</div>
 	<div class="gridContainer" style="{gridInstructions}">
 		{#each cells as cell, i}
-			{#if i > 0 && i % 7 === 0}
+			{#if i % 7 === 0}
 				<Graph />
 			{:else}
 				<Cell {cell} />
